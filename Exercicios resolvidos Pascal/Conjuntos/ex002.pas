@@ -1,4 +1,4 @@
-{o programa a seguir apresenta um resolucao em pascal para o seguinte exercicio:
+{o programa a seguir apresenta uma resolucao em pascal para o seguinte exercicio
 
 exercício 12.2) Desenvolva um subprograma para identificar os números primos en-
 tre 2 e um valor n, passado como parâmetro, onde 2 ≤ n ≤ 255. O subprograma de-
