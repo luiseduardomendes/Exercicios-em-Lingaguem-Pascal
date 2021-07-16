@@ -72,6 +72,7 @@ begin
         writeln('O numero ', num, ' pertence ao conjunto')
     else
         writeln('O numero ', num, ' nao pertence ao conjunto');
+    readln;
 end;
 
 procedure menu_pertinencia();
@@ -215,6 +216,7 @@ function menu_principal() : boolean;
 var
     resp : integer;
 begin
+    menu_principal := true;
     repeat
         clrscr;
         writeln('O que voce deseja fazer? ');
@@ -248,7 +250,8 @@ end;
 begin
     c1 := [];
     c2 := [];
-    while menu_principal = true do
+    repeat
         menu_principal();
+    until menu_principal = false;
     readln;
 end.
