@@ -1,3 +1,29 @@
+{
+
+exercício 12.1) Defina três conjuntos de inteiros c1, c2 e c3. Teste a sua mani-
+pulação por meio das seguintes operações:
+
+a) leia uma série de valores inteiros a partir do teclado e os insira no conjun-
+to c1. Forneça alguns valores repetidos para testar como serão armazenados no
+conjunto;
+b) imprima os valores contidos em c1. Verifique se os valores repetidos realmen-
+te aparecem somente uma vez no conjunto;
+c) insira no conjunto c2 os valores contidos em c1 que sejam superiores a um va-
+lor limite lido;
+d) imprima os valores contidos em c2;
+e) retire alguns valores de c2 e insira novos valores para que os dois conjuntos
+tenham valores diferentes;
+f) imprima os conteúdos de c1 e c2 para verificar como ficaram;
+g) teste todas as operações de união, intersecção e diferença entre os dois con-
+juntos, colocando sempre o resultado no conjunto c3. Imprima, a cada operação
+realizada, o conteúdo de c3 para verificar se a operação foi realizada com su-
+cesso;
+h) teste as operações de comparação entre conjuntos, comparando os conjuntos c1
+e c2, e imprima a cada vez o resultado obtido (verdadeiro ou falso);
+i) leia um valor inteiro e verifique, por meio da operação de pertinência, se
+esse valor pertence ou não aos conjuntos c1, c2 e c3. Imprima a resposta de ca-
+da verificação (verdadeiro ou falso).}
+                                            
 program ex038;
 uses CRT;
 type
