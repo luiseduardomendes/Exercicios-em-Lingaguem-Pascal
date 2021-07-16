@@ -1,4 +1,19 @@
+{o programa a seguir apresenta um resolucao em pascal para o seguinte exercicio:
 
+exercício 12.2) Desenvolva um subprograma para identificar os números primos en-
+tre 2 e um valor n, passado como parâmetro, onde 2 ≤ n ≤ 255. O subprograma de-
+verá devolver ao programa que o executar um conjunto (parâmetro de saída) com os
+números primos identificados no intervalo solicitado. Utilize na solução o Al-
+goritmo de Eratóstenes, descrito a seguir:
+
+a) coloque todos os inteiros entre 2 e n no conjunto números;
+b) repita até que o conjunto números esteja vazio:
+    b1) selecione e remova o menor elemento de números;
+    b2) coloque esse valor no conjunto primos;
+    b3) retire do conjunto números os múltiplos desse valor.
+Construa também um programa que leia o valor de n, verifique se o valor lido es-
+tá no intervalo definido e, se estiver, execute o procedimento e imprima o con-
+teúdo do conjunto de números primos identificados}
 program ex039;
 uses CRT;
 const
