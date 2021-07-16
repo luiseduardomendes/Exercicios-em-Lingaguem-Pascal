@@ -4,7 +4,6 @@ type
     conjunto = set of 1..255;
 var
     c1, c2, c3 : conjunto;
-    num : integer;
 procedure inserir(num : integer; var c : conjunto);
 begin
     c += [num];
@@ -17,6 +16,77 @@ begin
     for i := 1 to 255 do
         if i in c then
             write(i, ' ');
+    readln;
+end;
+procedure remover(num : integer; var c : conjunto);
+begin
+    c -= [num];
+end;
+procedure uniao();
+begin
+    c3 := c1 + c2;
+end;
+procedure interseccao();
+begin
+    c3 := c1 * c2;
+end;
+procedure diferenca();
+begin
+    c3 := c1 - c2;
+end;
+procedure igualdade();
+begin
+    if c1 = c2 then
+        writeln('C1 e C2 sao iguais')
+    else
+        writeln('C1 e C2 sao diferentes');
+    readln;
+end;
+procedure desigualdade();
+begin
+    if c1 <> c2 then
+        writeln('C1 e C2 sao diferentes')
+    else
+        writeln('C1 e C2 sao iguais');
+    readln;
+end;
+procedure contido();
+begin
+    if c1 <= c2 then
+        writeln('C1 esta contido em C2')
+    else
+        writeln('C1 nao esta contido em C2');
+    readln;
+end;
+procedure contem();
+begin
+    if c1 >= c2 then
+        writeln('C1 contem C2')
+    else
+        writeln('C1 nao contem C2');
+    readln;
+end;
+procedure pertinencia(num : integer; c : conjunto);
+begin
+    if num in c then
+        writeln('O numero ', num, ' pertence ao conjunto')
+    else
+        writeln('O numero ', num, ' nao pertence ao conjunto');
+end;
+
+procedure menu_pertinencia();
+var
+    num, conj : integer;
+begin
+    writeln('Digite o numero que quer testar a pertinencia');
+    readln(num);
+    writeln('Digite o conjunto no qual quer testar');
+    readln(conj);
+    case conj of
+        1 : pertinencia(num, c1);
+        2 : pertinencia(num, c2);
+        3 : pertinencia(num, c3);
+    end;
 end;
 procedure menu_operacoes();
 var
@@ -30,8 +100,30 @@ begin
         write('Sua opcao: ');
         readln(resp);
         if (resp > 3) or (resp < 1) then
+        begin
             writeln('Insira um valor valido [enter para continuar]');
             readln;
+        end;
+        if (resp <= 3) and (resp >= 1) then
+        begin
+            case resp of
+                1 : begin
+                    uniao();
+                    imprimir(c3);
+                    readln;
+                end;
+                2 : begin
+                    interseccao();
+                    imprimir(c3);
+                    readln;
+                end;
+                3 : begin
+                    diferenca();
+                    imprimir(c3);
+                    readln;
+                end;
+            end;
+        end;
     until (resp <= 3) and (resp >= 1);
 end;
 procedure menu_comparacoes();
@@ -50,21 +142,36 @@ begin
         begin
             writeln('Insira um valor valido [enter para continuar]');
             readln;
-        end;
+        end
+        else
+        begin
+            case resp of
+            1 : igualdade();
+            2 : desigualdade();
+            3 : contido();
+            4 : contem();
+            end;
+        end
+
     until (resp <= 3) and (resp >= 1);
 end;
 procedure menu_inserir();
 var
     conj, num : integer;
 begin
-    write('Digite o numero que deseja inserir: ');
-    readln(num);
     write('Digite o conjunto [1 ou 2]: ');
     readln(conj);
-    case conj of
-        1 : inserir(num, c1);
-        2 : inserir(num, c2);
-    end;
+    repeat
+        write('Digite o numero que deseja inserir [0 para parar]: ');
+        readln(num);
+        if num <> 0 then
+        begin
+            case conj of
+                1 : inserir(num, c1);
+                2 : inserir(num, c2);
+            end;
+        end;
+    until num = 0;
 end;
 procedure menu_imprimir();
 var
@@ -77,8 +184,34 @@ begin
         2 : imprimir(c2);
     end;
 end;
+procedure menu_valormin();
+var
+    num, i: integer;
+begin
+    writeln('Digite o numero para o valor minimo');
+    readln(num);
+    for i := num to 255 do
+        if i in c1 then
+            inserir (i, c2);
+end;
+procedure menu_remover();
+var
+    conj, num : integer;
+begin
+    writeln('Digite o conjunto do qual voce deseja remover');
+    readln(conj);
+    repeat
+        writeln('Digite o elemento que voce deseja remover [0 para parar]');
+        readln(num);
+        if num <> 0 then
+            case conj of
+                1 : remover(num, c1);
+                2 : remover(num, c2);
+            end;
+    until num = 0;
+end;
 
-procedure menu_principal();
+function menu_principal() : boolean;
 var
     resp : integer;
 begin
@@ -87,31 +220,35 @@ begin
         writeln('O que voce deseja fazer? ');
         writeln('[1] inserir elementos a um conjunto');
         writeln('[2] Imprimir os valores de um conjunto');
-        writeln('[3] Inserir um valor minimo para preencher o conjunto c2');
+        writeln('[3] Inserir um valor minimo e preencher o conjunto c2');
         writeln('[4] Remover elementos de um conjunto');
         writeln('[5] Realizar uma operacao entre os dois conjuntos');
         writeln('[6] Realizar uma comparacao entre os dois conjuntos');
         writeln('[7] Verificar se um valor pertence a um dos conjuntos');
+        writeln('[0] Encerrar o programa');
         write('Sua opcao: ');
         readln(resp);
-        if (resp > 7) or (resp < 1) then
+        if (resp > 7) or (resp < 0) then
         begin
             writeln('Insira um valor valido [enter para continuar]');
             readln;
             end;
-    until (resp <= 7) and (resp >= 1);
+    until (resp <= 7) and (resp >= 0);
     case resp of
         1 : menu_inserir();
         2 : menu_imprimir();
-        3 : ;
-        4 : ;
+        3 : menu_valormin();
+        4 : menu_remover();
         5 : menu_operacoes();
         6 : menu_comparacoes();
-        7 : ;
+        7 : menu_pertinencia();
+        0 : menu_principal := false;
     end;
 end;
 begin
-    menu_principal();
-    menu_principal();
+    c1 := [];
+    c2 := [];
+    while menu_principal = true do
+        menu_principal();
     readln;
 end.
