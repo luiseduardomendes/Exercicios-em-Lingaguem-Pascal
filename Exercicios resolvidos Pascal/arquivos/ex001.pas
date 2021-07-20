@@ -1,6 +1,4 @@
 program ex043;
-
-
 var
     arquivo : text;
     lido : string;
@@ -18,6 +16,13 @@ begin
     abrir_arquivo;
     writeln('Digite um texto: ');
     readln(lido);
+    while lido != '0' do
+    begin
+         seek(arquivo, filesize(arquivo));
+         write(arquivo, lido);
+         writeln('Digite outro texto [0 para parar]: ');
+         readln(lido);
+    end;
 
 
 
