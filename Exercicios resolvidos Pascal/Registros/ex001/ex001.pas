@@ -1,14 +1,3 @@
-{O programa a seguir apresenta uma resolucao em pascal para o seguinte exercicio
-
-exercício 11.1 Defina uma variável do tipo registro com quatro campos: um intei-
-ro, um real, um do tipo caractere e, o último, lógico. Faça um programa que:
-
-a) preencha cada um dos campos dessa variável (por leitura ou por meio de dados
-colocados pelo programa);
-b) altere por programa os valores contidos em cada um dos campos;
-c) imprima os valores finais em cada campo.}
-
-
 program ex035;
 uses CRT;
 type

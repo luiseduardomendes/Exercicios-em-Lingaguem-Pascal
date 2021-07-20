@@ -1,12 +1,3 @@
-{O programa a seguir apresenta uma resolucao em pascal para o seguinte exercicio
-
-exercício 11.5 Defina o tipo registro ponto com dois campos x e y (reais). Os
-campos representam as coordenadas desse ponto no sistema cartesiano. Escreva uma
-função que, dados dois pontos, calcule a distância entre eles. As coordenadas
-dos pontos devem ser lidas no programa principal e passadas à função por meio de
-parâmetros do tipo ponto. O resultado da função deve ser informado pelo programa
-principal.}
-
 program ex037;
 uses CRT;
 

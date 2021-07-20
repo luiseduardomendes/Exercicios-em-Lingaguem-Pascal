@@ -1,0 +1,9 @@
+O programa a seguir apresenta uma resolucao em pascal para o seguinte exercicio
+
+exercício 11.3 Defina uma variável do tipo registro que tenha dois campos. O 
+primeiro campo contém uma string. O segundo campo é também do tipo registro, 
+formado por três campos, todos inteiros. Faça um programa que:
+a) preencha cada um dos campos dessa variável por leitura;
+b) imprima os valores contidos em todos os campos;
+c) preencha novamente o segundo campo por leitura;
+d) imprima os valores finais em cada campo.
