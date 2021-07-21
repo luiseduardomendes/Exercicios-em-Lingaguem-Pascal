@@ -1,0 +1,12 @@
+exercício 13.3 Crie um arquivo de texto, todo em minúsculas, sem acentos ou cedilha, a
+partir de um texto digitado, em que mudanças de linha podem ser também sinalizadas pelo
+símbolo “#”. Na geração do arquivo, sempre que no texto de entrada for encontrado o carac-
+tere “#”, deve ser gerada uma mudança de linha. Os caracteres “#” não deverão aparecer no
+arquivo de texto gerado.
+Contabilize o número de linhas gravadas no arquivo de texto e apresente esse total ao final
+do processamento.
+Exemplo de texto de entrada:
+gigante pela propria natureza,#es belo, es forte, impavido colosso,#
+e o teu futuro espelha essa grandeza,#terra adorada,#
+entre outras mil,# es tu, Brasil,#oh patria amada!#
+dos filhos deste solo es mae gentil,#patria amada,#Brasil!#
