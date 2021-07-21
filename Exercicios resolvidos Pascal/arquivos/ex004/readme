@@ -1,0 +1,2 @@
+exercício 13.7: Considerando um arquivo de texto já gravado, escreva uma função lógica 
+que receba esse arquivo como parâmetro e verifique se, no texto, aparece a palavra ‘SENHA’.
