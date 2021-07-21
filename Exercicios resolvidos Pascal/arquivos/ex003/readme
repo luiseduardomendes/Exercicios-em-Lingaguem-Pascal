@@ -1,0 +1,3 @@
+exercício 13.5: Liste um arquivo de texto na tela, caractere por caractere. Apresente, ao final 
+do processamento, o total de linhas lidas do arquivo. O nome do arquivo utilizado deverá ser 
+fornecido durante a execução
