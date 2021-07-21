@@ -1,0 +1,7 @@
+exercício 13.1: Gere, linha por linha, um arquivo de texto com o seu conteúdo digitado pelo 
+usuário durante a execução. Como textos de teste, sugere-se trechos dos hinos Nacional do 
+Estado ou de times de futebol. O número de linhas fornecidas em uma execução particular 
+poderá ser maior ou igual a 1. Ao dar entrada ao texto, sugere-se digitar apenas um espaço 
+separador entre palavras e colocar os sinais de pontuação sempre junto às palavras, com o es-
+paço inserido depois deles (exemplo: Isso eh um teste. So para entender o que foi explicado.). 
+Apresente, ao final do processamento, o total de linhas gravadas no arquivo.
