@@ -1,0 +1,19 @@
+O programa a seguir apresenta uma resolucao em pascal para o seguinte exercicio:
+
+Exericio 8.4:  Faça um programa que armazene diversos pedidos feitos a uma empresa que
+produz doces. Ao definir um pedido, o cliente deve fornecer, para cada tipo de produto
+desejado, o número de unidades e o sabor desejado. Um cliente pode solicitar mais de um tipo
+de produto. Por exemplo, um pedido pode ser composto de 50 doces sabor chocolate, 50
+sonhos sabor baunilha e 20 tortas sabor morango.
+
+O programa deve executar os seguintes passos:
+
+a) armazenar os dados relativos a diversos pedidos em uma matriz, onde cada linha corresponde
+a um pedido, a primeira coluna corresponde ao número de doces, a segunda ao
+número de sonhos e a terceira ao número de tortas do pedido - essas colunas devem ser
+indexadas por meio dos nomes (doce, sonho, torta) e deve ser definida uma marca de
+parada para sinalizar o término dos pedidos;
+b) listar todos os pedidos realizados;
+c) informar quantas unidades de cada um dos tipos (doces, sonhos e tortas) foram pedidas;
+d) informar qual foi o maior número de unidades solicitado em um pedido, e de que produto
+
