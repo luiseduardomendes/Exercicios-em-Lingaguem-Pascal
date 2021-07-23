@@ -1,10 +1,3 @@
-{O programa a seguir apresenta uma resolucao em pascal para o seguinte exercicio
-
-exercício 10.4) Escreva uma função que recebe uma string de até 80 caracteres e
-um determinado caractere, e devolve a localização da última ocorrência desse ca-
-ractere na string. Se o caractere não aparecer na string, a função deve devolver
-um valor negativo}
-
 program ex033;
 uses CRT;
 const
