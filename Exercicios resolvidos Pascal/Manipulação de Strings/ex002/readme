@@ -1,0 +1,8 @@
+O programa a seguir apresenta uma resolucao em Pascal para o seguinte exercicio:
+
+exercicio 10.5) Construa um programa que processe um número indeterminado de li-
+nhas de texto com até 80 caracteres, fornecidas como entrada, até que o usuário
+indique que deseja parar. Em cada linha haverá sempre, pelo menos, uma palavra.
+Cada palavra estará separada da anterior por um espaço em branco, e o último ca-
+ractere digitado em uma linha será sempre um espaço em branco. As palavras do
+texto deverão ser apresentadas uma a uma, cada qual em uma linha.
